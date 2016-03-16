@@ -1,0 +1,71 @@
+﻿生成启动时间为 2016/3/16 18:56:32。
+     1>项目“C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\BNS_APP\BNS_APP.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\BNS_APP.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Debug\BNS_APP.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\BNS_APP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\BNS_APP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:prompt BNS_APP.cpp BNS_APPDlg.cpp cdib.cpp Out.cpp WzdSplash.cpp
+         BNS_APP.cpp
+         BNS_APPDlg.cpp
+     1>BNS_APPDlg.cpp(301): warning C4244: “=”: 从“ULONGLONG”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(388): warning C4244: “=”: 从“float”转换到“long”，可能丢失数据
+     1>BNS_APPDlg.cpp(430): warning C4244: “=”: 从“float”转换到“LONGLONG”，可能丢失数据
+     1>BNS_APPDlg.cpp(519): warning C4244: “=”: 从“float”转换到“long”，可能丢失数据
+     1>BNS_APPDlg.cpp(525): warning C4244: “参数”: 从“double”转换到“UINT”，可能丢失数据
+     1>BNS_APPDlg.cpp(721): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(971): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>BNS_APPDlg.cpp(977): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(253) : 参见“fscanf”的声明
+     1>BNS_APPDlg.cpp(1293): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1298): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1303): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1303): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1309): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1309): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1351): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1357): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1362): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1362): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1368): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1368): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(1795): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>BNS_APPDlg.cpp(1798): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>BNS_APPDlg.cpp(2128): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(2129): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(2180): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(2189): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>BNS_APPDlg.cpp(2390): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(791) : 参见“_splitpath”的声明
+     1>BNS_APPDlg.cpp(2515): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>BNS_APPDlg.cpp(2516): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>BNS_APPDlg.cpp(2566): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>BNS_APPDlg.cpp(2657): warning C4809: 切换语句有多余的“default”标签；给定所有可能的“case”标签
+         cdib.cpp
+         Out.cpp
+         WzdSplash.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\BNS_APP.res" BNS_APP.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\Debug\BNS_APP.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\BNS_APP\FFTW\Debug64" /LIBPATH:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\BNS_APP\BNSPCIeBoard\Debug64" "libfftw3-3.lib" "libfftw3f-3.lib" "libfftw3l-3.lib" BNSPCIeBoard.lib /MANIFEST /ManifestFile:"Debug\BNS_APP.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\Debug\BNS_APP.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\Debug\BNS_APP.lib" /MACHINE:X64 Debug\BNS_APP.res
+         Debug\BNS_APP.obj
+         Debug\BNS_APPDlg.obj
+         Debug\cdib.obj
+         Debug\Out.obj
+         Debug\stdafx.obj
+         Debug\WzdSplash.obj
+         BNS_APP.vcxproj -> C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\Debug\BNS_APP.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\Debug\BNS_APP.exe;#1" /manifest Debug\BNS_APP.exe.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug\BNS_APP.unsuccessfulbuild”。
+         正在对“Debug\BNS_APP.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Administrator\Desktop\动态相位屏控制台_20_x64\BNS_APP\BNS_APP.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.41

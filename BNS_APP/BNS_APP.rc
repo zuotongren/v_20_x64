@@ -1,0 +1,278 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\BNS_APP.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BNS_APP.ico"
+IDI_ICON1               ICON                    "res\\icon1.ico"
+IDI_ICON2               ICON                    "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 BNS_APP"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "BNS_APP，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_BNS_APP_DIALOG DIALOGEX 0, 0, 544, 322
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "NUFFT法相位屏模拟系统"
+FONT 11, "宋体", 400, 0, 0x86
+BEGIN
+    PUSHBUTTON      "预设值",IDC_BUTTON_YuSheZhi,78,283,42,14
+    EDITTEXT        IDC_EDIT1,90,33,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,90,52,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,90,72,40,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "打开",IDC_BUTTON_Open,410,27,34,12
+    EDITTEXT        IDC_EDIT_Begin_Num,457,93,69,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_End_Num,457,111,68,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Time,90,92,39,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Now,457,129,68,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,90,111,39,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_BUTTON_Add,420,256,24,15,BS_ICON
+    PUSHBUTTON      "Go",IDC_BUTTON_GO,420,275,24,14
+    PUSHBUTTON      "-",IDC_BUTTON_Down,420,291,24,14,BS_ICON
+    PUSHBUTTON      "加载",IDC_ADD,443,216,48,15
+    PUSHBUTTON      "OFF POWER",IDC_SLM_PWR_BUTTON,471,262,40,14
+    PUSHBUTTON      "START",IDC_START_STOP_BUTTON,471,285,41,14
+    PUSHBUTTON      "格式化",IDC_BUTTON_Out,496,28,31,11
+    PUSHBUTTON      "保存",IDC_BUTTON_Save,421,171,49,14
+    GROUPBOX        "参数设置：",IDC_STATIC,17,20,118,122
+    LTEXT           "Outer scale(m):",IDC_STATIC,24,36,61,8
+    LTEXT           "Inner scale(m):",IDC_STATIC,24,56,61,8
+    LTEXT           "Coherent length:",IDC_STATIC,24,76,65,8
+    GROUPBOX        "相位屏尺寸",IDC_STATIC,16,150,120,69
+    LTEXT           "相位屏宽度(m):",IDC_STATIC,19,169,55,8
+    LTEXT           "单幅长度(m):",IDC_STATIC,19,186,47,8
+    GROUPBOX        "相位屏生成控制按钮",IDC_STATIC,14,261,122,48
+    GROUPBOX        "文件相关参数",IDC_STATIC,406,45,123,104
+    LTEXT           "读取文件名:",IDC_STATIC,411,61,42,8
+    LTEXT           "文件单位数:",IDC_STATIC,411,78,42,8
+    LTEXT           "图片起始号：",IDC_STATIC,411,95,46,8
+    LTEXT           "图片结束号：",IDC_STATIC,411,113,45,8
+    LTEXT           "风  速 (m/s) :",IDC_STATIC,24,96,58,8
+    LTEXT           "当前显示号:",IDC_STATIC,411,132,42,8
+    LTEXT           "帧  率：",IDC_STATIC,24,112,37,8
+    GROUPBOX        "保存数据",IDC_STATIC,406,156,123,34
+    GROUPBOX        "硬件加载",IDC_STATIC,406,201,122,37
+    LTEXT           ".BMP格式",IDC_STATIC,484,174,32,8
+    GROUPBOX        "控制按钮",IDC_STATIC,406,247,122,61
+    GROUPBOX        "512*512相位屏显示：",IDC_STATIC,139,20,264,288
+    CONTROL         "",IDC_Picture,"Static",SS_BLACKFRAME,143,31,257,274
+    CONTROL         "Apply Phase Optimization",IDC_COMPENSATE_PHASE_CHECKBOX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,302,12,110,10
+    EDITTEXT        IDC_EDIT8,89,167,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,89,184,40,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "开始",IDC_BUTTON_KaiShi,25,283,42,14
+    EDITTEXT        IDC_EDIT_Path,457,56,69,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_Page,457,74,69,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "相位屏总长(Min):",IDC_STATIC,19,202,63,8
+    EDITTEXT        IDC_EDIT_T,89,202,40,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "实时帧率：",IDC_STATIC,24,127,39,8
+    EDITTEXT        IDC_EDIT5,90,127,38,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "进度条",IDC_STATIC,14,225,122,29
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,17,236,114,11
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 258, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "提示："
+FONT 11, "楷体", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,191,83,38,14
+    DEFPUSHBUTTON   "格式化",IDCANCEL,137,83,40,14
+    LTEXT           "您确定要退出程序吗？这样做程序将会关闭，您也可格式化程序！",IDC_STATIC,11,38,237,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "BNS_APP.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "BNS_APP.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_BNS_APP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 538
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 316
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 BNS_APP(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\BNS_APP.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
