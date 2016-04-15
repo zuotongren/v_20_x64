@@ -22,8 +22,8 @@ using namespace std;
 #define PI 3.1415926f      //π的定义
 #define e  2.7182818f      //自然数e的定义
 #define LC 0.00768        //液晶屏的宽度为7.68mm
-#define POINT 512          //液晶屏上列（行）向像素点个数为512个
-#define Mosaic 400         //拼接部分为500个pixel
+#define POINT  512         //液晶屏上列（行）向像素点个数为512个
+#define Mosaic 200     //拼接部分为500个pixel
 #define T_1_1 0.0044       //加载一副相位屏所用时间
 #define Up false
 #define Down true

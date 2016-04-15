@@ -6,7 +6,7 @@
 #include "cdib.h"
 #include <fstream>
 #include "math.h"
-#include "Windows.h"
+//#include "Windows.h"
 #include "WzdSplash.h"
 #include "Out.h"
 #include "afx.h"
@@ -298,7 +298,7 @@ void CBNS_APPDlg::OnBnClickedButtonOpen()
 	if (file.Open(strFilePath,  CFile::modeRead))
 	{
 			file.SeekToBegin();
-			Page=(file.GetLength()-sizeof(file_head))/(8*biWidth)-511;     //获得相位屏帧数
+			Page=(file.GetLength())/(8*biWidth)-511;     //获得相位屏帧数  -sizeof(file_head)
 			CS_Page.Format(_T("file long %d "),Page);       //打印相位屏帧数信息
 			SetDlgItemText(IDC_EDIT_Page,CS_Page);  
 
@@ -318,16 +318,16 @@ void CBNS_APPDlg::OnBnClickedButtonOpen()
 				ColorBuff[i]=new unsigned char[biWidth*biHeight];
 			                                              
 			}*/
-			file.Read(&file_head,sizeof(file_head));
+			//file.Read(&file_head,sizeof(file_head));
 			file.Read(ColorBuff,8*512*(Page+511));
-			m_L0=file_head.m_L0;
+			/*m_L0=file_head.m_L0;
 	        m_i0=file_head.m_i0;
 	        m_r0=file_head.m_r0;
 	        m_speed=file_head.m_speed;
 	        m_frame=file_head.m_frame;
 	        m_Width_m=file_head.m_Width_m;
 	        m_Len_m=file_head.m_Len_m;
-	        m_T=file_head.m_T;
+	        m_T=file_head.m_T;*/
 			file.Close();
 			UpdateData(Up);
 			if(m_Width<POINT)                  //申请一个512*512的数组，用于当生成的相位屏小于512时，这将其转化为512*512
@@ -1256,6 +1256,8 @@ void CBNS_APPDlg::OnBnClickedButtonKaishi()
 	file_head.m_Len_m=m_Len_m;
 	file_head.m_T=m_T;
 
+	m_r0=m_r0/2.25;     //修正r0
+
 	Mosaic_Pixel=Mosaic;
 	m_Len=int(m_Len_m*m_Rr);        //将相位屏的长物理尺度（单位 米）变换到像素尺度（单位 pixel）
 	m_Width=int(m_Width_m*m_Rr);    //将相位屏的宽物理尺度（单位 米）变换到像素尺度（单位 pixel）
@@ -1278,10 +1280,10 @@ void CBNS_APPDlg::OnBnClickedButtonKaishi()
 	int i = 0, k = 0;
 	m_errorboundd=0.5/m_Len;
 	m_errorboundu=1/m_Len;
-	if((1/m_Len)<0.00002)
+	if((1/m_Len)<0.0002)
 	{
-		m_errorboundd=0.00001;
-		m_errorboundu=0.00002;
+		m_errorboundd=0.0001;
+		m_errorboundu=0.0002;
 	}
 	/**************************************/
 	//
@@ -1535,7 +1537,7 @@ void CBNS_APPDlg::OnBnClickedButtonKaishi()
 		C_Bg[k]=pow(sin(PI*k/(2.0*Mosaic_Pixel)),2.0);//相位屏开头拼接系数函数
 	}
 	Create_File();
-	save_headata();
+	//save_headata();
 	/**************************************/
 	//
 	//下面的for循环实现了相位屏的生成和拼接
@@ -1565,15 +1567,24 @@ void CBNS_APPDlg::OnBnClickedButtonKaishi()
 	 save_data(A_P);
 	 m_Progress.StepIt();//进度条+1
 	}
-
 	Nufft(Spectrum1,kax_dbside, com_x, kay_dbside,com_y);
 	for(int i=0;i<POINT;i++)
 	 for(int j=0;j<Mosaic_Pixel;j++)
 		{
 			A_P[i][j]=A_P[i][j]*C_Bg[j]+End_AP[i][j]*C_end[j];
 	    }
-	Mosaic_Pixel=0;
-	save_data(A_P);	
+	 Mosaic_Pixel=0;
+	 save_data(A_P);
+
+
+	//Mosaic_Pixel=0;
+	//for(int s=0;s<50;s++)
+	//{
+	//	Nufft(Spectrum1,kax_dbside, com_x, kay_dbside,com_y);
+	//	m_Progress.StepIt();//进度条+1
+	//	save_data(A_P);	
+	//}
+	
 	m_Progress.StepIt();//进度条+1
 	MessageBox(_T("数据生成完毕,已保存...") ,MB_OK,MB_ICONASTERISK);
 	  m_Prepare_value.EnableWindow(true);
@@ -1614,7 +1625,6 @@ void CBNS_APPDlg::Nufft(double **Spectrum1,double *kax_dbside, int com_x, double
 	{
 		Rand_Spect1[i] = new double_complex[2 * com_y + 1];
 	}
-	
 	for (int i = 0; i < 2 * com_x + 1; i++)
 		for (int j = 0; j < 2 * com_y + 1; j++)
 		{
@@ -1661,7 +1671,7 @@ void CBNS_APPDlg::Nufft(double **Spectrum1,double *kax_dbside, int com_x, double
 	for (int i = 0; i < m_Width; i++)
 		for (int j = 0; j < m_Len; j++)
 		{
-			A_P[i][j] = Mod_double(kk*((Nuphz_1[i][j]-min)/(max-min)),2*PI);
+			A_P[i][j] =Mod_double(kk*((Nuphz_1[i][j]-min)/(max-min)),2*PI);// kk*(Nuphz_1[i][j]-min)/(max-min);
 		}
 }
 
@@ -1865,7 +1875,14 @@ CString CBNS_APPDlg::rands()
 
 }
 
-void CBNS_APPDlg::FGG_2d_type1(double_complex **Rand_Spect1, double_complex **Nuphz, double *kax_dbside, int com_x, double *kay_dbside, int com_y, int Nx, int Ny, int Desired_accuracy)
+void CBNS_APPDlg::FGG_2d_type1 (double_complex **Rand_Spect1, 
+
+	                             double_complex **Nuphz, double *kax_dbside,
+
+	                             int com_x, double *kay_dbside, int com_y,
+								
+								 int Nx, int Ny, int Desired_accuracy)
+
 {
 	long M;
 	M = (2 * com_x + 1) * (2 * com_y + 1);
@@ -2330,7 +2347,7 @@ void CBNS_APPDlg::Save_Pic_BMP(double *PictureBuff,int page,int Height,int Width
 		file.Write((char*)&RGB[i].rgbRed,sizeof(RGB[i].rgbRed));
 		file.Write((char*)&Buwei,1);
 	}
-	double min,max;
+	/*double min,max;
 	min=PictureBuff[0];
 	max=PictureBuff[0];
 	for(int i=1;i<512*512;i++)
@@ -2343,13 +2360,13 @@ void CBNS_APPDlg::Save_Pic_BMP(double *PictureBuff,int page,int Height,int Width
 		{
 			max=PictureBuff[i];
 		}
-	}
+	}*/
 	unsigned __int8  ColorBuff1[512*512];
 	for(int j=0;j<512*512;j++)
 	{
-		ColorBuff1[j]=char(2*PI*(PictureBuff[j]/(max-min)));
+		ColorBuff1[j]=char(255*(PictureBuff[j]/(2*PI)));
 	}
-		  for(int j=0;j<Height*Width;j++)                      //写位图数据
+		  for(int j=0;j<512*512;j++)                      //写位图数据
 		    {
 				 file.Write((char*)&ColorBuff1[j],sizeof(ColorBuff1[j])); 
                 
