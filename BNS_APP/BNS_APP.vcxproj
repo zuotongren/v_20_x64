@@ -170,7 +170,7 @@
     </ProjectReference>
     <Link>
       <AdditionalDependencies>libfftw3-3.lib;libfftw3f-3.lib;libfftw3l-3.lib;BNSPCIeBoard.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>E:\GitHub\v_20_x64\BNS_APP\FFTW\Debug64;E:\GitHub\v_20_x64\BNS_APP\BNSPCIeBoard\Debug64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>J:\v_20_x64\BNS_APP\BNSPCIeBoard\Debug64;J:\v_20_x64\BNS_APP\FFTW\Debug64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
     </Link>

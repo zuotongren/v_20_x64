@@ -1,10 +1,13 @@
-﻿生成启动时间为 2016/1/4 20:41:36。
-     1>项目“E:\GitHub\v_20_x64\BNS_APP\BNS_APP.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
+﻿生成启动时间为 2016/5/10 13:31:05。
+     1>项目“J:\v_20_x64\BNS_APP\BNS_APP.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\BNS_APP.lastbuildstate”。
+       InitializeBuildStatus:
          正在创建“Debug\BNS_APP.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         所有输出均为最新。
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\BNS_APP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:prompt BNS_APP.cpp BNS_APPDlg.cpp Out.cpp WzdSplash.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\BNS_APP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\BNS_APP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:prompt BNS_APP.cpp BNS_APPDlg.cpp cdib.cpp Out.cpp WzdSplash.cpp
          BNS_APP.cpp
          BNS_APPDlg.cpp
      1>BNS_APPDlg.cpp(301): warning C4244: “=”: 从“ULONGLONG”转换到“int”，可能丢失数据
@@ -41,27 +44,28 @@
      1>BNS_APPDlg.cpp(2533): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
      1>BNS_APPDlg.cpp(2583): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
      1>BNS_APPDlg.cpp(2674): warning C4809: 切换语句有多余的“default”标签；给定所有可能的“case”标签
+         cdib.cpp
          Out.cpp
          WzdSplash.cpp
          Generating Code...
        ResourceCompile:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\BNS_APP.res" BNS_APP.rc 
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\v_20_x64\Debug\BNS_APP.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:E:\GitHub\v_20_x64\BNS_APP\FFTW\Debug64 /LIBPATH:E:\GitHub\v_20_x64\BNS_APP\BNSPCIeBoard\Debug64 "libfftw3-3.lib" "libfftw3f-3.lib" "libfftw3l-3.lib" BNSPCIeBoard.lib /MANIFEST /ManifestFile:"Debug\BNS_APP.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\GitHub\v_20_x64\Debug\BNS_APP.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\v_20_x64\Debug\BNS_APP.lib" /MACHINE:X64 Debug\BNS_APP.res
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"J:\v_20_x64\Debug\BNS_APP.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:J:\v_20_x64\BNS_APP\BNSPCIeBoard\Debug64 /LIBPATH:J:\v_20_x64\BNS_APP\FFTW\Debug64 "libfftw3-3.lib" "libfftw3f-3.lib" "libfftw3l-3.lib" BNSPCIeBoard.lib /MANIFEST /ManifestFile:"Debug\BNS_APP.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"J:\v_20_x64\Debug\BNS_APP.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\v_20_x64\Debug\BNS_APP.lib" /MACHINE:X64 Debug\BNS_APP.res
          Debug\BNS_APP.obj
          Debug\BNS_APPDlg.obj
          Debug\cdib.obj
          Debug\Out.obj
          Debug\stdafx.obj
          Debug\WzdSplash.obj
-         BNS_APP.vcxproj -> E:\GitHub\v_20_x64\Debug\BNS_APP.exe
+         BNS_APP.vcxproj -> J:\v_20_x64\Debug\BNS_APP.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\GitHub\v_20_x64\Debug\BNS_APP.exe;#1" /manifest Debug\BNS_APP.exe.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"J:\v_20_x64\Debug\BNS_APP.exe;#1" /manifest Debug\BNS_APP.exe.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
        FinalizeBuildStatus:
          正在删除文件“Debug\BNS_APP.unsuccessfulbuild”。
          正在对“Debug\BNS_APP.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\GitHub\v_20_x64\BNS_APP\BNS_APP.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“J:\v_20_x64\BNS_APP\BNS_APP.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.57
+已用时间 00:00:05.02
